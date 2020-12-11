@@ -6,7 +6,7 @@ class BurgerStack extends Component {
     render(){
         const burgerIngredients = this.props.burgerArray.map((ingredient, idx) => {
             return (
-            <li key={idx}>{ingredient.name}</li>
+            <li key={idx} style={{color: ingredient.color}}>{ingredient.name}</li>
             )
         })
         return(

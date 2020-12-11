@@ -1,25 +1,12 @@
-import { Component } from "react";
 
-class Ingredients extends Component {
-  render() {
-    const listIngredients = this.props.ingredients.map((ingredient, idx) => (
-      <div key={idx}>
-        <li>
-          {ingredient.name}
-          <button onClick={() => this.props.handleBurgerIngredient(ingredient)}>
-          &#8594;
-          </button>
-        </li>
-      </div>
-    ));
-
-    return (
-      <div>
-        <h1>Choose Your Ingredients</h1>
-        <ul>{listIngredients}</ul>
-      </div>
-    );
-  }
+function Ingredient(props) {
+    return(
+        <div>
+            {props.name}
+            <button onClick={() => {props.addLayer(props.name)}}>
+                Add
+            </button>
+        </div>
+    )
 }
-
-export default Ingredients;
+export default Ingredient;
